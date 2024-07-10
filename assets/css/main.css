@@ -2450,3 +2450,17 @@ input, select, textarea {
     top: 10px; /* Adjust as needed */
     right: 20px; /* Adjust as needed */
 }
+
+/* CSS for the quote */
+.quote {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    color: #ffc107; /* Golden color */
+    transition: color 0.3s, text-shadow 0.3s; /* Transition for color and text-shadow */
+}
+
+.quote:hover {
+    color: #ffd700; /* Brighter golden color on hover */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8); /* Glowing effect */
+}
