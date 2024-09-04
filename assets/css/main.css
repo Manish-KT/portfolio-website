@@ -2034,6 +2034,34 @@ input, select, textarea {
 				}
 
 /* Nav */
+		#nav ul.container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		#nav li.logo {
+			margin-right: auto;
+		}
+
+		#nav li.logo img {
+			height: 40px; /* Adjust height as necessary */
+			width: auto; /* Keeps the aspect ratio of the logo */
+			display: block;
+		}
+
+		#nav ul.container li a {
+			text-decoration: none;
+			color: #fff; /* Adjust color based on your theme */
+			padding: 10px;
+			display: inline-block;
+		}
+
+		/* Optional: Add spacing between logo and the rest of the nav items */
+		#nav li.logo {
+			padding-right: 20 20 20 0 px;
+		}
+
 
 	#nav {
 		background-color: #282828;
