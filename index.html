@@ -1,399 +1,435 @@
-<!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Manish Kumar Tailor - Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-12345" crossorigin="anonymous" />
-		<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-		
-		<style>
-			/* Sidebar styles */
-			.sidebar {
-				height: 100%;
-				width: 0;
-				position: fixed;
-				z-index: 1;
-				top: 0;
-				right: 0;
-				background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
-				backdrop-filter: blur(10px); /* Blurred background */
-				overflow-x: hidden;
-				transition: 0.5s;
-				padding-top: 60px;
-			}
-			
-			.sidebar a {
-				padding: 10px 15px;
-				text-decoration: none;
-				font-size: 18px;
-				color: white;
-				display: block;
-				transition: 0.3s;
-				text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glowing effect */
-			}
-			
-			.sidebar a:hover {
-				background-color: #575757;
-			}
-			
-			.sidebar .closebtn {
-				position: absolute;
-				top: 0;
-				right: 25px;
-				font-size: 36px;
-				margin-left: 50px;
-				color: white;
-			}
-	
-			/* Icon styles */
-			.sidebar a i {
-				margin-right: 10px;
-			}
-		</style>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      const savedTheme = localStorage.getItem('theme')
+      const theme = savedTheme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
+      document.documentElement.setAttribute('data-theme', theme)
+    </script>
+    <meta
+      name="description"
+      content="Manish Kumar Tailor — AI Engineer specializing in agentic AI, LLMs, and enterprise automation."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Manish Kumar Tailor — AI Engineer</title>
+  </head>
+  <body>
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
 
-	</head>
-	<body class="is-preload">
+    <header class="navbar" id="navbar">
+      <div class="navbar__inner">
+        <a href="#top" class="navbar__brand">
+          <span class="prompt-symbol">&gt;</span>manish<span class="cursor">_</span>
+        </a>
+        <nav class="navbar__links" id="navLinks">
+          <a href="#about" data-nav>about</a>
+          <a href="#experience" data-nav>experience</a>
+          <a href="#projects" data-nav>projects</a>
+          <a href="#skills" data-nav>skills</a>
+          <a href="#certifications" data-nav>certifications</a>
+          <a href="#contact" data-nav>contact</a>
+        </nav>
+        <div class="navbar__controls">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
 
-	<!-- Nav -->
-	<nav id="nav">
-		<ul class="container">
-			<li><a href="#top">Top</a></li>
-			<li><a href="#work-experience">Work Experience</a></li>
-			<li><a href="#work">Skills</a></li>
-			<li><a href="#portfolio">Projects</a></li>
-			<li><a href="#education">Education</a></li>
-			<li><a href="#contact">Contact</a></li>
-			<li class="profile-link"><a href="javascript:void(0)" onclick="toggleSidebar()">Profiles</a></li>
-		</ul>
-	</nav>
+    <main>
+      <!-- HERO -->
+      <section id="top" class="hero">
+        <div class="hero__inner">
+          <div class="terminal reveal">
+            <div class="terminal__bar">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="terminal__title">manish@portfolio: ~</span>
+            </div>
+            <div class="terminal__body">
+              <p class="terminal__line"><span class="prompt-symbol">$</span> whoami</p>
+              <h1 class="terminal__name">Manish Kumar Tailor</h1>
+              <p class="terminal__line">
+                <span class="prompt-symbol">$</span> role --current
+                <span class="typed-role" id="typedRole"></span><span class="cursor">_</span>
+              </p>
+              <p class="terminal__line terminal__output">
+                Experienced <span class="highlight">AI/ML Engineer</span> with 1+ year of hands-on experience and a
+                strong background in <span class="highlight">GenAI, LLMs, and agentic systems</span>. I build
+                production-ready chatbots, modular agents, and automation workflows that deliver
+                <span class="highlight">measurable business impact</span>.
+              </p>
+              <div class="terminal__actions">
+                <a class="btn btn--primary" href="#contact">./contact.sh</a>
+                <a class="btn btn--ghost" href="assets/resume.pdf" download>
+                  download --resume
+                </a>
+                <a class="btn btn--ghost" href="https://www.linkedin.com/in/manish-kumar-tailor/" target="_blank" rel="noreferrer">
+                  view --linkedin
+                </a>
+                <a class="btn btn--ghost" href="https://github.com/Manish-KT" target="_blank" rel="noreferrer">
+                  view --github
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-		<!-- Sidebar -->
-		<div id="mySidebar" class="sidebar">
-			<a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
-			<a href="https://www.credly.com/users/manish-kumar-tailor/badges"><i class="fab fa-angellist"></i> Credly Profile</a>
-			<a href="https://www.coursera.org/learner/manish-kt"><i class="fab fa-studiovinari"></i>Coursera Profile</i></a>
-			<a href="https://www.linkedin.com/in/manish-kumar-tailor-6564ab22b/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-			<a href="https://github.com/manish-KT"><i class="fab fa-github"></i> GitHub</a>
-			<a href="https://www.instagram.com/manish_kt_chill.life/?hl=en"><i class="fab fa-instagram"></i> Instagram</a>
-		</div>
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <h2 class="section__title reveal"><span class="prompt-symbol">$</span> cat about.md</h2>
+        <div class="about reveal">
+          <div class="about__intro">
+            <div class="about__photo">
+              <img src="assets/manish_pp.png" alt="Manish Kumar Tailor" />
+            </div>
+            <p class="about__bio">
+              I'm currently working as an <span class="highlight">SDE1 on the AI Engineering team at HashedIn by
+              Deloitte</span>, building autonomous AI agents, chatbots, and end-to-end applications, along with
+              automation pipelines. My core stack is <span class="highlight">Python</span>, and I have a solid
+              grounding in data engineering, backed by industry certifications. Before this, I spent over a year
+              as an <span class="highlight">AI Software Engineer at Technology Mindz</span>, delivering production
+              AI solutions for enterprise clients, and worked freelance for <span class="highlight">Dexkor.com</span>
+              helping set up their AI services in the company's early days.
+            </p>
+          </div>
+          <div class="card about__education">
+            <p class="card__label"># education</p>
+            <div class="about__education-row">
+              <div>
+                <p class="about__degree">B.Tech, Computer Science &amp; Engineering — Specialization in AI &amp; ML</p>
+                <p class="about__school">Indian Institute of Information Technology (IIIT) Kota, Rajasthan, India</p>
+              </div>
+              <p class="about__meta">2021 – 2025 · CGPA: 8.4</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-		<!-- Home -->
-		<article id="top" class="wrapper style1" style="background-image: url('images\\top_bg.jpg'); background-size: cover; background-position: center;">
-			<div class="container">
-				<div class="row">
-					<div class="col-4 col-5-large col-12-medium">
-						<span class="image fit"><img src="images/pic00.png" alt="" /></span>
-					</div>
-					<div class="col-8 col-7-large col-12-medium">
-						<header>
-							<h1>Hi. I'm <strong>Manish Kumar Tailor</strong>.</h1>
-							<h5 style="text-align: center; font-style: italic; color: #555;">An enthusiastic Data Engineer, driving my way through the wilds of web scraping and AI tools, crafting data magic to make the digital world a bit more understandable and a lot more fun!</h5>
-						</header>
-						<a href="#work-experience" target="_blank" class="button large scrolly">Learn about what I do</a>
-						<a href="images/resume/new_resume_manish.pdf" target="_blank" class="button large">View my resume</a>
-					</div>
-				</div>
-			</div>
-		</article>
-		
-		
-		
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section section--alt">
+        <h2 class="section__title reveal"><span class="prompt-symbol">$</span> git log --experience</h2>
+        <ol class="timeline">
+          <li class="timeline__item reveal" style="--i: 0">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <div class="timeline__heading">
+                <h3>SDE1 — AI &amp; Engineering</h3>
+                <span class="timeline__period">Feb 2026 – Present · 7 mos</span>
+              </div>
+              <p class="timeline__company">HashedIn by Deloitte · Full-time</p>
+              <p class="timeline__location">Bangalore · On-site</p>
+              <ul class="timeline__points">
+                <li>
+                  Contributed to <span class="highlight">Gemini Enterprise</span> enablement by building AI agents
+                  using <span class="highlight">Google ADK</span>, helping establish practical GenAI capabilities
+                  for client-focused use cases.
+                </li>
+                <li>Recognized with a <span class="highlight">Spot Award</span> for impactful project contribution and delivery.</li>
+              </ul>
+              <div class="tags timeline__tags">
+                <span class="tag">Claude Code</span><span class="tag">Google BigQuery</span>
+              </div>
+            </div>
+          </li>
+          <li class="timeline__item reveal" style="--i: 1">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <div class="timeline__heading">
+                <h3>AI Software Engineer</h3>
+                <span class="timeline__period">Nov 2024 – Jan 2026 · 1 yr 3 mos</span>
+              </div>
+              <p class="timeline__company">Technology Mindz · Full-time</p>
+              <p class="timeline__location">Jaipur, Rajasthan, India · On-site</p>
+              <ul class="timeline__points">
+                <li>
+                  Built <span class="highlight">AI-driven systems</span>, including RAG-based bots, AI-enabled web
+                  scrapers, and intelligent invoice data extraction workflows.
+                </li>
+                <li>Automated repetitive tasks using <span class="highlight">Selenium</span> to improve efficiency and reduce manual effort.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item reveal" style="--i: 2">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <div class="timeline__heading">
+                <h3>Freelance AI Engineer</h3>
+                <span class="timeline__period">Jan 2025 – Jun 2025 · 6 mos</span>
+              </div>
+              <p class="timeline__company">Dexkor.com · Freelance</p>
+              <p class="timeline__location">Remote</p>
+              <ul class="timeline__points">
+                <li>Set up <span class="highlight">Dexkor's initial AI services</span> as an early freelance engineer, helping stand up their AI infrastructure from the ground up.</li>
+                <li>Worked on <span class="highlight">DexyAI</span>, their chatbot product, at its initial development stage.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item reveal" style="--i: 3">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <div class="timeline__heading">
+                <h3>Team Member — Kálā Copilot</h3>
+              </div>
+              <p class="timeline__company">Microsoft Agentic Hackathon</p>
+              <ul class="timeline__points">
+                <li>
+                  Collaborated on a <span class="highlight">seven-agent system</span> orchestrated with
+                  <span class="highlight">Microsoft Autogen</span> that helps artisans turn product photos into
+                  complete social media campaigns — names, descriptions, hashtags, and pricing in regional
+                  languages.
+                </li>
+                <li>Agents covered onboarding, visual insight, branding, SEO, pricing, cataloging, and posting, chained together as a sequential multi-agent handoff pipeline.</li>
+              </ul>
+              <div class="tags timeline__tags">
+                <span class="tag">Azure OpenAI</span><span class="tag">Microsoft Autogen</span>
+                <span class="tag">Azure AI Agent Service</span><span class="tag">Azure CosmosDB</span>
+              </div>
+              <a class="link-inline timeline__link" href="https://github.com/ipshitag/Kala-Copilot" target="_blank" rel="noreferrer">
+                view --repo →
+              </a>
+            </div>
+          </li>
+          <li class="timeline__item reveal" style="--i: 4">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <div class="timeline__heading">
+                <h3>AI Software Engineer Intern</h3>
+                <span class="timeline__period">Jun 2024 – Aug 2024 · 3 mos</span>
+              </div>
+              <p class="timeline__company">AIgnotics Labs · Internship</p>
+              <p class="timeline__location">Remote</p>
+              <ul class="timeline__points">
+                <li>Designed, developed, and maintained software solutions incorporating AI and ML techniques to support intelligent application delivery.</li>
+              </ul>
+              <div class="tags timeline__tags">
+                <span class="tag">Virtual Prototyping</span><span class="tag">Internet/Intranet Technologies</span>
+              </div>
+            </div>
+          </li>
+          <li class="timeline__item reveal" style="--i: 5">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <div class="timeline__heading">
+                <h3>Machine Learning Intern</h3>
+                <span class="timeline__period">Jul 2023 – Aug 2023 · 2 mos</span>
+              </div>
+              <p class="timeline__company">Suvidha Foundation (Suvidha Mahila Mandal) · Internship</p>
+              <p class="timeline__location">Remote</p>
+              <ul class="timeline__points">
+                <li>
+                  Contributed to research on <span class="highlight">transformer-based architectures</span>,
+                  exploring pointer-network-style sequence generation techniques.
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item reveal" style="--i: 6">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <div class="timeline__heading">
+                <h3>Data Aggregator</h3>
+                <span class="timeline__period">Jan 2023 – Jul 2023 · 7 mos</span>
+              </div>
+              <p class="timeline__company">Newsyog · Internship</p>
+              <p class="timeline__location">Remote</p>
+              <ul class="timeline__points">
+                <li>Maintained Python-based pipelines and applied web scraping techniques to collect comprehensive data from multiple sources.</li>
+              </ul>
+              <div class="tags timeline__tags">
+                <span class="tag">Data Pipelines</span><span class="tag">Data Scraping</span>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </section>
 
-		<!-- Work Experience -->
-		<article id="work-experience" class="wrapper style2">
-			<div class="container">
-				<header>
-					<h2>My Work Experience</h2>
-					<p>Explore my journey and professional experiences.</p>
-				</header>
-				<div class="row aln-left">
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<span class="icon featured"><i class="fas fa-cogs fa-5x"></i></span>
-							<h3>AI Software Engineer Intern</h3>
-							<p>AIGNOTICS Labs • June 2024 - Present</p>
-							<ul>
-								<li>Conducting comprehensive requirement gathering tailored to project specifications.</li>
-								<li>Collaborating closely researchers for project alignment.</li>
-								<li>Designing and implementing rigorous training and testing protocols for model development.</li>
-							</ul>
-						</section>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<span class="icon solid featured fa-code-fork"></span>
-							<h3>ML Intern</h3>
-							<p>Suvidha NGO • August 2023 - September 2023</p>
-							<ul>
-								<li>Managed Python pipelines for comprehensive data collection.</li>
-								<li>Proficient in web scraping for extensive data aggregation.</li>
-								<li>Contributed to enhancing data quality and optimizing data processing pipelines.</li>
-							</ul>
-						</section>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<span class="icon featured fa-chart-bar"></span>
-							<h3>Data Aggregator and Research Intern</h3>
-							<p>Newsyog (Yoglabs) • January 2023 - July 2023</p>
-							<ul>
-								<li>Contributed to impactful initiatives.</li>
-								<li>Managed Python pipelines for comprehensive data collection.</li>
-								<li>Contributed to enhancing data quality and optimizing data processing pipelines.</li>
-							</ul>
-						</section>
-					</div>
-				</div>
-				<footer>
-					<p>Curious to learn more about my professional journey?</p>
-					<a href="#work" class="button large scrolly">See what I am sepcialized in!</a>
-				</footer>
-			</div>
-		</article>
-			
+      <!-- PROJECTS -->
+      <section id="projects" class="section">
+        <h2 class="section__title reveal"><span class="prompt-symbol">$</span> ls ./projects</h2>
+        <div class="project-grid">
+          <a class="card project-card reveal" style="--i: 0" href="https://github.com/Manish-KT/pdf_chatbot_using_llm" target="_blank" rel="noreferrer">
+            <p class="card__label">01</p>
+            <h3>Chat with PDF Bot</h3>
+            <p>Chatbot that answers questions from uploaded PDFs using an LLM-powered conversational interface.</p>
+            <span class="project-card__link">open --repo →</span>
+          </a>
+          <a class="card project-card reveal" style="--i: 1" href="https://github.com/manish-kt/End-to-End-Text-Summarization" target="_blank" rel="noreferrer">
+            <p class="card__label">02</p>
+            <h3>End-to-End Text Summarization</h3>
+            <p>NLP project for text summarization, deployed via GitHub Actions.</p>
+            <span class="project-card__link">open --repo →</span>
+          </a>
+          <a class="card project-card reveal" style="--i: 2" href="https://github.com/manish-kt/data-engineering-practice" target="_blank" rel="noreferrer">
+            <p class="card__label">03</p>
+            <h3>Data Engineering Practice</h3>
+            <p>Automated data pipelines for streamlined integration and processing.</p>
+            <span class="project-card__link">open --repo →</span>
+          </a>
+          <a class="card project-card reveal" style="--i: 3" href="https://github.com/manish-kt/Web_Scrpaing_Automation" target="_blank" rel="noreferrer">
+            <p class="card__label">04</p>
+            <h3>Web Scraping Automation</h3>
+            <p>Extracted and analyzed data from multiple websites for insights.</p>
+            <span class="project-card__link">open --repo →</span>
+          </a>
+        </div>
+      </section>
 
-		<!-- Work -->
-		<article id="work" class="wrapper style2">
-			<div class="container">
-				<header>
-					<h2>Here's what I specialize in.</h2>
-					<p>Exploring the depths of data engineering, mastering the art of web scraping, and pushing the boundaries of AI.</p>
-				</header>
-				<div class="row aln-center">
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<span class="icon featured"><i class="fas fa-database fa-5x"></i></span>
-							<h3>Data Engineering</h3>
-							<p>Building robust pipelines and optimizing data workflows for seamless integration and efficiency.</p>
-						</section>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<span class="icon solid featured"><i class="fas fa-code fa-5x"></i></span>
-							<h3>Web Scraping</h3>
-							<p>Extracting valuable insights from the web, transforming raw data into meaningful information.</p>
-						</section>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<section class="box style1">
-							<span class="icon featured"><i class="fas fa-lightbulb fa-5x"></i></span>
-							<h3>AI Innovation</h3>
-							<p>Implementing AI algorithms to automate processes, drive innovation, and enhance decision-making.</p>
-						</section>
-					</div>
-				</div>
-				<footer>
-					<p>Curious to see more?</p>
-					<a href="#portfolio" class="button large scrolly">Explore my projects</a>
-				</footer>
-			</div>
-		</article>
-		
-		
-		<!-- Portfolio -->
-		<article id="portfolio" class="wrapper style3">
-			<div class="container">
-				<header>
-					<h2>Explore my recent projects.</h2>
-					<p>Discover my work in data engineering, web scraping, AI, and more.</p>
-				</header>
-				<div class="row">
-					<div class="col-4 col-6-medium col-12-small">
-						<article class="box style2">
-							<a href="https://github.com/manish-kt/data-engineering-practice" class="image featured"><img src="images/pic01.jpg" alt="Data Pipeline Automation" /></a>
-							<h3><a href="https://github.com/manish-kt/data-engineering-practice">Data Engg. Projects</a></h3>
-							<p>Engineered automated data pipelines to streamline integration and processing workflows, enhancing efficiency and data reliability.
-							</p>
-						</article>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<article class="box style2">
-							<a href="https://github.com/manish-kt/Web_Scrpaing_Automation" class="image featured"><img src="images/pic02.jpg" alt="Web Scraping Project" /></a>
-							<h3><a href="https://github.com/manish-kt/Web_Scrpaing_Automation">Web Scraping Project</a></h3>
-							<p>Extracted and analyzed data from multiple websites to gather insights and support business decisions.</p>
-						</article>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<article class="box style2">
-							<a href="https://github.com/Manish-KT/pdf_chatbot_using_llm" class="image featured"><img src="images/pic03.jpg" alt="Chat with PDF Bot" /></a>
-							<h3><a href="https://github.com/Manish-KT/pdf_chatbot_using_llm">Chat with PDF Bot</a></h3>
-							<p>Designed a chatbot to provide answers extracted from uploaded PDF files using a conversational interface and LLMs.</p>
-						</article>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<article class="box style2">
-							<a href="https://github.com/Manish-KT/Portrfolio_Projects" class="image featured"><img src="images/pic04.jpg" alt="GUI Typing Speed Tester" /></a>
-							<h3><a href="https://github.com/Manish-KT/Portrfolio_Projects">Python Projects</a></h3>
-							<p>Projects created as part of the 100 days of Python programming course with Angela Yu on Udemy.</p>
-						</article>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<article class="box style2">
-							<a href="https://github.com/manish-kt/End-to-End-Text-Summarization" class="image featured"><img src="images/pic05.jpg" alt="End-to-End Text Summarization" /></a>
-							<h3><a href="https://github.com/manish-kt/End-to-End-Text-Summarization">End-to-End Text Summarization</a></h3>
-							<p>Implemented an NLP project for text summarization with deployment using GitHub Actions.</p>
-						</article>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<article class="box style2">
-							<a href="https://github.com/manish-kt/Flask_Tutorial" class="image featured"><img src="images/pic06.jpg" alt="Flask Website" /></a>
-							<h3><a href="https://github.com/manish-kt/Flask_Tutorial">Flask Website</a></h3>
-							<p>Practice website for my Flask project, showcasing blogs and content management.</p>
-						</article>
-					</div>
-				</div>
-				<footer>
-					<p>Curious about my education?</p>
-					<a href="#education" class="button large scrolly">My Education</a>
-				</footer>
-			</div>
-		</article>
+      <!-- SKILLS -->
+      <section id="skills" class="section section--alt">
+        <h2 class="section__title reveal"><span class="prompt-symbol">$</span> pip list --skills</h2>
+        <div class="skills-grid">
+          <div class="card skills-card reveal" style="--i: 0">
+            <p class="card__label"># programming &amp; frameworks</p>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">FastAPI</span>
+              <span class="tag">LangChain</span><span class="tag">Hugging Face Transformers</span><span class="tag">Scikit-learn</span>
+            </div>
+          </div>
+          <div class="card skills-card reveal" style="--i: 1">
+            <p class="card__label"># ai / ml &amp; genai</p>
+            <div class="tags">
+              <span class="tag">LLMs &amp; Prompt Engineering</span><span class="tag">RAG Pipelines</span>
+              <span class="tag">Agentic Workflows &amp; Multi-Agent Systems</span><span class="tag">Google ADK</span>
+              <span class="tag">Gemini Enterprise</span><span class="tag">NLP</span><span class="tag">Model Fine-tuning</span>
+            </div>
+          </div>
+          <div class="card skills-card reveal" style="--i: 2">
+            <p class="card__label"># data &amp; databases</p>
+            <div class="tags">
+              <span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Supabase</span>
+              <span class="tag">MongoDB</span><span class="tag">Pinecone</span><span class="tag">FAISS</span>
+              <span class="tag">Weaviate</span><span class="tag">Pandas</span><span class="tag">NumPy</span>
+            </div>
+          </div>
+          <div class="card skills-card reveal" style="--i: 3">
+            <p class="card__label"># cloud &amp; devops</p>
+            <div class="tags">
+              <span class="tag">AWS (Lambda, EC2, Schedulers)</span>
+              <span class="tag">Azure (AI Foundry, CosmosDB, AI Search)</span><span class="tag">Docker</span>
+            </div>
+          </div>
+          <div class="card skills-card reveal" style="--i: 4">
+            <p class="card__label"># tools &amp; others</p>
+            <div class="tags">
+              <span class="tag">REST APIs</span><span class="tag">Plotly</span><span class="tag">Git</span>
+              <span class="tag">Microsoft Power Automate</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- CERTIFICATIONS -->
+      <section id="certifications" class="section">
+        <h2 class="section__title reveal"><span class="prompt-symbol">$</span> ls ./certifications</h2>
+        <div class="cert-table reveal">
+          <div class="cert-row">
+            <div><h3>Claude Certified Architect — Foundations</h3><p class="cert-row__issuer">Anthropic</p></div>
+            <span class="cert-row__date">Aug 2026</span>
+          </div>
+          <div class="cert-row">
+            <div><h3>Hack Together: AI Agents Hackathon</h3><p class="cert-row__issuer">Microsoft Americas Azure Team</p></div>
+            <span class="cert-row__date">Jun 2025</span>
+          </div>
+          <div class="cert-row">
+            <div><h3>Data Engineering Professional Certificate (V2)</h3><p class="cert-row__issuer">Coursera</p></div>
+            <span class="cert-row__date">Sep 2024</span>
+          </div>
+          <div class="cert-row">
+            <div><h3>Big Data with Spark and Hadoop Essentials</h3><p class="cert-row__issuer">Coursera</p></div>
+            <span class="cert-row__date">Aug 2024</span>
+          </div>
+          <div class="cert-row">
+            <div><h3>Python for Data Science and AI</h3><p class="cert-row__issuer">Coursera</p></div>
+            <span class="cert-row__date">Aug 2024</span>
+          </div>
+        </div>
+        <a class="link-inline" href="https://www.credly.com/users/manish-kumar-tailor/badges" target="_blank" rel="noreferrer">
+          view --all-badges (Credly) →
+        </a>
+      </section>
 
-		<!-- Education -->
-		<article id="education" class="wrapper style2">
-			<div class="container">
-				<div class="row">
-					<div class="col-4 col-5-large col-12-medium">
-						<span class="image fit"><img src="images/edu.jpg" alt="" /></span>
-					</div>
-					<div class="col-8 col-7-large col-12-medium">
-						<header>
-							<h2>Education Timeline</h2>
-							<p>This is where I studied...</p>
-						</header>
-						<section>
-							<div class="row">
-								<div class="col-6">
-									<div class="timeline">
-										<div class="timeline-item">
-											<div class="timeline-icon">
-												<i class="fas fa-circle"></i>
-											</div>
-											<div class="timeline-content">
-												<h3><a href="https://iiitkota.ac.in/computer-science-eng">B.Tech in Computer Science</a></h3>
-												<p>Indian Institute of Information Technology, Kota</p>
-												<p>Branch: C.S.E (specialization in A.I.)</p>
-												<p>Jan 2021 - June 2025</p>
-												<p>CGPA: 8.15</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-6">
-									<div class="timeline">
-										<div class="timeline-item">
-											<div class="timeline-icon">
-												<i class="fas fa-circle"></i>
-											</div>
-											<div class="timeline-content">
-												<h3><a href="">Higher Secondary Education</a></h3>
-												<p>Price UMV, Sikar (Raj. Indian)</p>
-												<p>Branch: P.C.M</p>
-												<p>Year of Completion: 2020</p>
-												<p>Percentage: 96%</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
-					</div>
-				</div>
-				<footer>
-					<a href="#contact" class="button large scrolly">Let's Connect</a>
-				</footer>
-			</div>
-		</article>
-		
-		
-		
-		
-		
-		<!-- Contact -->
-		<article id="contact" class="wrapper style4">
-			<div class="container medium">
-				<header>
-					<h2>Get in touch with me!</h2>
-					<p>Drop me a message and let's create something awesome together.</p>
-				</header>
-				<div class="row">
-					<div class="col-12">
-						<form action="https://api.web3forms.com/submit" method="POST">
+      <!-- CONTACT -->
+      <section id="contact" class="section section--alt">
+        <h2 class="section__title reveal"><span class="prompt-symbol">$</span> ./contact.sh</h2>
+        <p class="contact__intro">
+          Let's talk about agentic AI, LLM engineering, or automation. I'm happy to hear from recruiters,
+          collaborators, or anyone with an interesting problem to solve.
+        </p>
+        <div class="contact-grid">
+          <a class="card contact-card reveal" style="--i: 0" href="mailto:manishkumartailor092@gmail.com">
+            <span class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" stroke="none"/><path d="M3 5h18v14H3z"/><path d="m3 5 9 7 9-7"/></svg>
+            </span>
+            <div>
+              <h3>Email</h3>
+              <p><span class="contact-card__cta">manishkumartailor092@gmail.com</span> &mdash; the fastest way to reach me directly.</p>
+            </div>
+            <span class="contact-card__cta">Send email →</span>
+          </a>
 
-							<!-- Replace with your Access Key -->
-							<input type="hidden" name="access_key" value="4f1ff30c-bab6-4312-b40b-30e50b1ca7f2">
-						
-							<!-- Form Inputs. Each input must have a name="" attribute -->
-							<div class="row gtr-uniform">
-								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="name" placeholder="Your Name" required>
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="email" placeholder="Your Email" required>
-								</div>
-								<div class="col-12">
-									<textarea name="message" id="message" placeholder="Your Message" rows="4" required></textarea>
-								</div>
-								<!-- Honeypot Spam Protection -->
-								<div class="col-12">
-									<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-								</div>
-								<div class="col-12">
-									<!-- Custom Confirmation / Success Page -->
-									<input type="hidden" name="redirect" value="https://manish-kt.github.io/portfolio-website/#contact">
-									<button type="submit">Submit Form</button>
-								</div>
-							</div>
-						
-						</form>
-						
-					</div>
-					<div class="col-12">
-						<hr />
-						<blockquote class="quote">
-							"Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program."
-							<cite>- Linus Torvalds</cite>
-						</blockquote>
-						<hr />
-					</div>
-				</div>
-				<footer>
-					<ul id="copyright">
-						<li>&copy; 2024 Manish Kumar Tailor. All rights reserved.</li>
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</footer>
-			</div>
-		</article>		
+          <a class="card contact-card reveal" style="--i: 1" href="https://www.linkedin.com/in/manish-kumar-tailor/" target="_blank" rel="noreferrer">
+            <span class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            </span>
+            <div>
+              <h3>LinkedIn</h3>
+              <p>Connect with me professionally &mdash; open to opportunities &amp; collaborations.</p>
+            </div>
+            <span class="contact-card__cta">Connect →</span>
+          </a>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+          <a class="card contact-card reveal" style="--i: 2" href="https://github.com/Manish-KT" target="_blank" rel="noreferrer">
+            <span class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.4 9.4 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.75c0 .26.18.57.69.48A10 10 0 0 0 12 2z"/></svg>
+            </span>
+            <div>
+              <h3>GitHub</h3>
+              <p>Browse my code, side projects, and open-source contributions.</p>
+            </div>
+            <span class="contact-card__cta">View profile →</span>
+          </a>
 
-			<script>
-				function toggleSidebar() {
-					var sidebar = document.getElementById("mySidebar");
-					if (sidebar.style.width === "250px") {
-						sidebar.style.width = "0";
-					} else {
-						sidebar.style.width = "250px";
-					}
-				}
-			</script>
+          <a class="card contact-card reveal" style="--i: 3" href="https://www.credly.com/users/manish-kumar-tailor/badges" target="_blank" rel="noreferrer">
+            <span class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg>
+            </span>
+            <div>
+              <h3>Credly</h3>
+              <p>See my certifications and industry-recognized badges.</p>
+            </div>
+            <span class="contact-card__cta">View badges →</span>
+          </a>
+        </div>
+      </section>
+    </main>
 
-	</body>
+    <footer class="footer">
+      <p><span class="prompt-symbol">$</span> echo "&copy; <span id="year"></span> Manish Kumar Tailor"</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
